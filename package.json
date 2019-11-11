@@ -1,0 +1,10 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.17.0"
+  },
+  "scripts": {
+    "start": "cd packages/editor && npm statr"
+  }
+}
