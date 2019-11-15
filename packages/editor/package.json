@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build --analyze",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -25,21 +25,36 @@
   },
   "dependencies": {
     "antd": "^3.25.1",
+    "codemirror": "^5.49.2",
+    "dragula": "^3.7.2",
+    "file-saver": "^2.0.2",
     "gg-editor": "^3.0.0-beta.3",
+    "iframe-resizer-react": "^1.0.1",
+    "immutability-helper": "^3.0.1",
+    "jszip": "^3.2.2",
+    "lodash": "^4.17.15",
+    "lodash-decorators": "^6.0.1",
+    "medium-editor": "^5.23.3",
+    "rc-editor-list": "^1.6.4",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-scripts": "^3.2.0"
+    "react-dnd": "^9.4.0",
+    "react-dnd-html5-backend": "^9.4.0",
+    "react-dom": "^16.11.0"
   },
   "devDependencies": {
-
+    "@types/dragula": "^2.1.34",
     "@types/jest": "^24.0.22",
     "@types/node": "^12.12.7",
     "@types/react": "^16.9.11",
-    "@types/react-dom": "^16.9.4",    
+    "@types/react-dom": "^16.9.4",
+    "babel-plugin-import": "^1.12.2",
     "customize-cra": "^0.8.0",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
     "react-app-rewired": "^2.1.5",
-    "typescript": "^3.7.2"
-
+    "react-scripts": "^3.2.0",
+    "typescript": "^3.7.2",
+    "webpack-bundle-analyzer": "^3.6.0"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",

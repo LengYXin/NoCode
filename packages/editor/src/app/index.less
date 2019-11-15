@@ -1,0 +1,41 @@
+@import '~style/custom';
+.edit {
+    &-wrapper {
+      width: 100%;
+      position: relative;
+      height: 100vh;
+      background: @edit-bg-color;
+      overflow: hidden;
+      /** {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      } */
+      > div {
+        height: 100%;
+        float: left;
+      }
+      .ant-layout-header{
+          padding-left: 40px;
+          .ant-menu-item .anticon{
+              margin: 0;
+          }
+      }
+      .ant-layout-sider,
+      .ant-layout-header{
+        background: @edit-bg-color;
+        color: #fff;
+      }
+    }
+    &-left-view {
+      width: ~"calc(100% - 288px)";
+    }
+    &-right-view {
+      width: 288px;
+      border-left: 1px solid @edit-line-color;
+    }
+    &-list{
+    }
+  }
+  
