@@ -2,10 +2,15 @@ import React from 'react';
 import { bindAll } from 'lodash-decorators';
 import styles from './style.module.less';
 import Drag from 'components/drop/drag';
+import Source from 'components/drop/source';
 import { List, Menu, Icon, Drawer } from 'antd';
+import { EnumComponentsTypes } from 'enums';
+import { TemplateEntities } from 'entities/template';
+import { observer, inject } from 'mobx-react';
 export interface IAppProps {
 }
 @bindAll()
+
 export default class App extends React.Component<IAppProps> {
     ref = React.createRef<HTMLDivElement>();
     state = {
@@ -28,20 +33,24 @@ export default class App extends React.Component<IAppProps> {
                     getContainer={false}
                     style={{ position: 'absolute' }}
                 >
-                    <div ref={this.ref}>
-                        <Drag model={{}} type="readyTags">
+                    <div className={styles.content}>
+                        <Drag model={{}} type={EnumComponentsTypes.Layout}>
                             <div>拖</div>
                         </Drag>
-                        <Drag model={{}} type="readyTags">
+                        {/* <Source key={item.key} index={index} type={EnumComponentsTypes.LayoutSource} moveCard={this.moveCard}>
+                            <Card title={item.key} extra={<a href="#">More</a>} style={{ width: '100%' }}>
+                                <Drop
+                                    type={EnumComponentsTypes.DataEntry}
+                                // onDrop={this.props.TemplateExample.onPush}
+                                >
+                                    <div style={{ height: 50 }}>
+
+                                    </div>
+                                </Drop>
+                            </Card>
+                        </Source> */}
+                        <Drag model={{}} type={EnumComponentsTypes.DataEntry}>
                             <div>Swap me around</div>
-
-                        </Drag>
-                        <Drag model={{}} type="sourceTags">
-                            <div>Swap her around</div>
-
-                        </Drag>
-                        <Drag model={{}} type="sourceTags">
-                            <div>Swap him around</div>
                         </Drag>
                     </div>
                 </Drawer>

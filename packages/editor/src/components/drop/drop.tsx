@@ -22,7 +22,7 @@ const dustbinTarget = {
 }
 
 export interface DustbinProps {
-	accepts: string[]
+	type: string[]
 	canDrop?: boolean
 	isOver?: boolean
 	connectDropTarget?: ConnectDropTarget
@@ -30,7 +30,7 @@ export interface DustbinProps {
 }
 
 @DropTarget(
-	(props: DustbinProps) => props.accepts,
+	(props: DustbinProps) => props.type,
 	dustbinTarget,
 	(connect, monitor) => ({
 		connectDropTarget: connect.dropTarget(),

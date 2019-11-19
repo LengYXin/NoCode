@@ -1,17 +1,25 @@
 @import '~style/custom';
-@list-width:40px;
+@list-width: 40px;
+
 .list {
   width: @list-width;
-  :global(.ant-menu){
+
+  :global(.ant-menu) {
     background: @edit-bg-color;
     color: @edit-text-color;
   }
-  :global(.ant-menu-inline-collapsed){
+
+  :global(.ant-menu-inline-collapsed) {
     width: @list-width;
     border: none;
-    :global(.ant-menu-item){
+
+    :global(.ant-menu-item) {
       padding: 0 12px !important;
       width: @list-width;
     }
   }
+}
+
+.content {
+  color: #000;
 }

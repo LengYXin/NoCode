@@ -20,7 +20,7 @@ import {
 // import { XYCoord } from 'dnd-core'
 const style = {
     border: '1px dashed gray',
-    marginBottom: '.5rem',
+    marginBottom: '.2rem',
     backgroundColor: '#ffffffa8',
     cursor: 'move',
 }
@@ -90,7 +90,7 @@ export default class Card extends React.Component<any> {
             connectDragSource,
             connectDropTarget,
         } = this.props
-        const opacity = isDragging ? 0.6 : 1
+        const opacity = isDragging ? 0.4 : 1
 
         return (
             connectDragSource &&
