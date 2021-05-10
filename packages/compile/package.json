@@ -27,6 +27,6 @@
     "url": "https://github.com/LengYXin/NoCode/issues"
   },
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.21"
   }
 }
